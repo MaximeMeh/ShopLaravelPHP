@@ -44,7 +44,7 @@ class CarController extends Controller
         $price = request('price');
         $description = request('description');
 
-        Car::create(['make' => $request->name, 'model' => $request->price, 'produced_on' => $request->description]);
+        $car = Car::create(['make' => $request->name, 'model' => $request->price, 'produced_on' => $request->description]);
 
         return redirect()->route('articles.index');
         /*
